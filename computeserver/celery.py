@@ -6,8 +6,8 @@ from celery import Celery
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'computeserver.settings')
 
 app = Celery('computeserver',
-             broker='redis://localhost:6379/',
-             backend='redis://localhost:6379/',
+             broker='redis://localhost:7377/',
+             backend='redis://localhost:7377/',
              include=['computeserver.tasks'])
 
 # Using a string here means the worker doesn't have to serialize
